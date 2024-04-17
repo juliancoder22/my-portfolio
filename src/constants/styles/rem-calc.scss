@@ -1,0 +1,7 @@
+@function remCalc($px) {
+  $baseFontSizeInPx: 16;
+
+  $remValue: $px / $baseFontSizeInPx;
+
+  @return $remValue;
+}
