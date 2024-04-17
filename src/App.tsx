@@ -1,8 +1,10 @@
+import HomeComponent from "./components/HomeComponent/HomeComponent"
 
 function App() {
 
   return (
     <>
+    <HomeComponent />
     </>
   )
 }
