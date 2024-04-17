@@ -1,3 +1,5 @@
+@import '../../constants/styles/rem-calc.scss';
+
 .expand-from-bottom {
     animation: expandFromBottom 0.3s ease forwards;
   }
@@ -8,7 +10,7 @@
       opacity: 0;
     }
     to {
-      max-height: 1000px;
+      max-height: rem(1000);
       opacity: 1;
     }
   }
@@ -19,7 +21,7 @@
   
   @keyframes expandFromTop {
     from {
-      max-height: 1000px;
+      max-height: rem(1000);
       opacity: 1;
     }
     to {
@@ -48,7 +50,7 @@
       justify-content: space-around;
       gap: 2rem;
       width: 60%;
-      margin-top: 70px;
+      margin-top: rem(70);
     }
   
     &__frontend {
@@ -74,7 +76,7 @@
           background: none;
           outline: none;
           border: none;
-          font-size: 20px;
+          font-size: rem(20);
           
           &.rotate {
             span {
@@ -88,7 +90,7 @@
       display: none;
       overflow: hidden;
       transition: max-height 0.3s ease;
-      max-height: 1000px; // Cambiado de 0 a un valor grande
+      max-height: rem(1000);
       opacity: 0;
     
       p {
@@ -98,9 +100,9 @@
     
     &__frontend-content.expanded {
       display: block;
-      max-height: 1000px;
+      max-height: rem(1000);
       opacity: 1;
-      @extend .expand-from-bottom; // Añadir la clase de animación extendiéndola
+      @extend .expand-from-bottom;
     }
   
     &__backend {
@@ -126,7 +128,7 @@
         background: none;
         outline: none;
         border: none;
-        font-size: 20px;
+        font-size: rem(20);
         
         &.rotate {
           span {
@@ -140,7 +142,7 @@
       display: none;
       overflow: hidden;
       transition: max-height 0.3s ease;
-      max-height: 1000px; // Cambiado de 0 a un valor grande
+      max-height: rem(1000);
       opacity: 0;
     
       p {
@@ -150,9 +152,9 @@
     
     &__backend-content.expanded {
       display: block;
-      max-height: 1000px;
+      max-height: rem(1000);
       opacity: 1;
-      @extend .expand-from-bottom; // Añadir la clase de animación extendiéndola
+      @extend .expand-from-bottom;
     }
     
     &__content-skills {
@@ -225,16 +227,16 @@
       position: absolute;
       bottom: 18rem;
       left: -3rem;
-      width: 120px;
-      height: 120px;
+      width: rem(120);
+      height: rem(120);
       pointer-events: none;
     }
   
     &__square {
       position: absolute;
-      left: 80px;
+      left: rem(80);
       top: 18rem;
-      width: 80px;
+      width: rem(80);
     }
   }
   
