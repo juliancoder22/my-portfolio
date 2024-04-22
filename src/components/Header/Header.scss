@@ -1,0 +1,62 @@
+@import "../../constants/styles/rem-calc.scss";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem 25px;
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  right: 0;
+  font-family: "Fira Code", monospace;
+
+  img {
+    width: 32px;
+    height: 32px;
+    margin: 0;
+    padding: 0;
+    pointer-events: none;
+  }
+
+  &__nav {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    position: relative;
+
+    li {
+      color: #b6c5d3;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.2rem;
+
+      &:last-child {
+        color: #8c81e6;
+      }
+    }
+  }
+
+  &__bar {
+    color: #8c81e6;
+  }
+
+  &__language-menu {
+    .MuiPaper-root {
+      background-color: rgba(255, 255, 255, 0.09);
+      color: rgba(116, 140, 163, 1);
+      text-transform: uppercase;
+
+      .MuiMenuItem-root {
+        font-size: rem(15);
+        font-weight: 600;
+
+        &:hover {
+          color: #8c81e6;
+        }
+      }
+    }
+  }
+}
