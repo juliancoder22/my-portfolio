@@ -1,0 +1,43 @@
+@import "../../constants/styles/rem-calc.scss";
+
+.skills-media {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  left: 0;
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: rem(4);
+    position: absolute;
+    left: 2.9rem;
+    top: 12rem;
+    list-style: none;
+  }
+
+  &__icon.MuiSvgIcon-root {
+    width: rem(28);
+    height: rem(28);
+    color: #748ca3;
+    z-index: 10;
+
+    &:hover {
+      cursor: pointer;
+      color: #8c81e6;
+    }
+  }
+
+  &__vertical {
+    position: absolute;
+    top: -14rem;
+    left: 6.2rem;
+  }
+
+  &__horizontal {
+    position: absolute;
+    top: -14rem;
+    left: 0rem;
+  }
+}
