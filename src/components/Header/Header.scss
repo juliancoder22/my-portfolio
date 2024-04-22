@@ -1,10 +1,10 @@
+@import "../../constants/styles/rem-calc.scss";
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.2rem 25px;
-  border-bottom: 2px solid #b6c5d3;
-  border-top: 2px solid #b6c5d3;
   position: absolute;
   top: 1rem;
   left: 0;
@@ -12,17 +12,18 @@
   font-family: "Fira Code", monospace;
 
   img {
-   width: 32px;
-   height: 32px;
-   margin: 0;
-   padding: 0;
-   pointer-events: none;
+    width: 32px;
+    height: 32px;
+    margin: 0;
+    padding: 0;
+    pointer-events: none;
   }
 
   &__nav {
     display: flex;
     list-style: none;
     gap: 40px;
+    position: relative;
 
     li {
       color: #b6c5d3;
@@ -40,14 +41,22 @@
 
   &__bar {
     color: #8c81e6;
-    font-weight: bolder;
   }
 
-  &__language-menu.MuiPaper-root {
-    background-color: #8c81e6 !important;
-  }
-}
+  &__language-menu {
+    .MuiPaper-root {
+      background-color: rgba(255, 255, 255, 0.09);
+      color: rgba(116, 140, 163, 1);
+      text-transform: uppercase;
 
-.header__language-menu.MuiPaper-root {
-  background-color: #8c81e6 !important;
+      .MuiMenuItem-root {
+        font-size: rem(15);
+        font-weight: 600;
+
+        &:hover {
+          color: #8c81e6;
+        }
+      }
+    }
+  }
 }
