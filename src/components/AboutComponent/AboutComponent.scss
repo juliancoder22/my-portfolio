@@ -1,0 +1,82 @@
+@import "../../constants/styles/rem-calc.scss";
+
+.about {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  font-family: "Fira Code", monospace;
+  padding-top: 2rem;
+
+  &__text {
+    width: rem(500);
+    color: #748ca3;
+    font-weight: 400;
+    line-height: rem(26);
+    font-size: rem(20);
+    padding-top: 2rem;
+    margin: rem(200) auto 0 auto;
+  }
+
+  &__first-square {
+    width: rem(144);
+    height: rem(144);
+    border: 1px solid #748ca3;
+    position: absolute;
+    top: 33rem;
+    left: 5rem;
+  }
+
+  &__second-square {
+    width: rem(144);
+    height: rem(144);
+    border: 1px solid #748ca3;
+    position: absolute;
+    top: 29rem;
+    left: 9.5rem;
+  }
+
+  &__third-square {
+    width: rem(200);
+    height: rem(200);
+    border: 1px solid #748ca3;
+    position: absolute;
+    right: -2rem;
+    top: 24rem;
+  }
+  
+  &__line-1 {
+    position: absolute;
+    top: 21rem;
+    left: 0rem;
+    width: rem(500);
+  }
+
+  &__line-2 {
+    position: absolute;
+    top: 21rem;
+    left: 31rem;
+    width: rem(2);
+  }
+
+  &__line-3 {
+    position: absolute;
+    top: 49rem;
+    left: 30.9rem;
+    width: rem(1500);
+  }
+
+  &__trio-chevron {
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 41.9rem;
+    right: 10rem;
+    width: rem(150);
+  }
+
+  &__dots {
+    position: absolute;
+    left: 18rem;
+    bottom: 8rem;
+    width: rem(110);
+  }
+}
