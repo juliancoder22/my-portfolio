@@ -14,29 +14,32 @@ const HomeComponent = () => {
     const originalName = "Julian Aquino";
     const intervalId = setInterval(() => {
       if (writingIndex < originalName.length) {
-        setName(prevName => prevName + originalName[writingIndex]);
-        setWritingIndex(prevIndex => prevIndex + 1);
+        setName((prevName) => prevName + originalName[writingIndex]);
+        setWritingIndex((prevIndex) => prevIndex + 1);
       } else {
         clearInterval(intervalId);
       }
     }, 110);
 
     return () => clearInterval(intervalId);
-  }, [writingIndex]);
+  }, [writingIndex, 1000]);
 
   useEffect(() => {
     const originalProfession = "web developer";
     const intervalId = setInterval(() => {
       if (writingProfessionIndex < originalProfession.length) {
-        setProfession(prevProfession => prevProfession + originalProfession[writingProfessionIndex]);
-        setWritingProfessionIndex(prevIndex => prevIndex + 1);
+        setProfession(
+          (prevProfession) =>
+            prevProfession + originalProfession[writingProfessionIndex]
+        );
+        setWritingProfessionIndex((prevIndex) => prevIndex + 1);
       } else {
         clearInterval(intervalId);
       }
     }, 110);
 
     return () => clearInterval(intervalId);
-  }, [writingProfessionIndex]);
+  }, [writingProfessionIndex, 1000]);
 
   return (
     <div className="home">
