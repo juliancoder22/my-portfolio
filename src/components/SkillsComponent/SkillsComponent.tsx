@@ -6,6 +6,7 @@ import "./SkillsComponent.scss";
 import SectionHeader from "../HeaderSection/HeaderSection";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
+import { SkillsMediaComponent } from "../SkillsMediaComponent/SkillsMediaComponent";
 
 function SkillsComponent() {
   const [frontendExpanded, setFrontendExpanded] = useState(false);
@@ -21,6 +22,7 @@ function SkillsComponent() {
 
   return (
     <div className="skills-component">
+      <SkillsMediaComponent />
       <SectionHeader title="skills" subtitle="What can I do?" />
       <div className="skills-component__content">
         <div className="skills-component__content-info">
@@ -68,7 +70,11 @@ function SkillsComponent() {
           </div>
         </div>
         <div className="skills-component__content-skills">
-          <img src={TrioChevron} alt="dots" className="skills-component__trio-chevron" />
+          <img
+            src={TrioChevron}
+            alt="dots"
+            className="skills-component__trio-chevron"
+          />
           <img src={Points} alt="dots" className="skills-component__dots" />
           <img src={Square} alt="square" className="skills-component__square" />
           <div className="skills-component__languages">
