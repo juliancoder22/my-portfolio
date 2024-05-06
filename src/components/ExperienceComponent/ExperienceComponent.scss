@@ -1,0 +1,90 @@
+@import "../../constants/styles/rem-calc.scss";
+
+.experience {
+  width: 100%;
+  height: 160vh;
+  font-family: "Fira Code", monospace;
+  position: relative;
+
+  &__company-square {
+    padding: 2rem;
+    width: rem(500);
+    border: 1px solid #748ca3;
+    position: absolute;
+    top: 12rem;
+    left: -1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    span {
+      color: #fff;
+      font-size: rem(30);
+    }
+  }
+
+  &__work-connection-one {
+    position: absolute;
+    border-bottom: 1px solid #748ca3;
+    border-right: 1px solid #748ca3;
+    width: rem(280);
+    height: rem(100);
+    top: 47.7rem;
+    right: 42rem;
+  }
+
+  &__work-connection-two {
+    position: absolute;
+    width: rem(280);
+    height: rem(100);
+    top: 53.91rem;
+    right: 59.5rem;
+    border-top: 1px solid #748ca3;
+    border-left: 1px solid #748ca3;
+  }
+
+  &__double-chevron {
+    position: absolute;
+    top: 40rem;
+    left: 40rem;
+  }
+
+  &__first-square {
+    width: rem(191);
+    height: rem(191);
+    border: 1px solid #748ca3;
+    position: absolute;
+    left: -1rem;
+    bottom: 33rem;
+  }
+
+  &__second-square {
+    width: rem(191);
+    height: rem(191);
+    border: 1px solid #748ca3;
+    position: absolute;
+    right: -1rem;
+    bottom: 20rem;
+  }
+
+  &__third-square {
+    width: rem(104);
+    height: rem(104);
+    border: 1px solid #748ca3;
+    position: absolute;
+    right: 20rem;
+    bottom: 15rem;
+  }
+}
+
+.anthos {
+  position: absolute;
+  right: 24rem;
+  top: 15rem;
+}
+
+.madcave {
+  position: absolute;
+  left: 24rem;
+  bottom: 4.2rem;
+}
