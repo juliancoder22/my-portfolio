@@ -1,65 +1,88 @@
-@import '../../constants/styles/rem-calc.scss';
+@import "../../constants/styles/rem-calc.scss";
 
 .contact {
-    width: 65%;
-    margin: auto;
-    height: 100vh;
-    font-family: "Fira Code", monospace;
-    font-weight: 600;
-    border-top: 3px solid #8C81E6;
-    padding: 2rem 4rem 0 4rem;
-    box-sizing: border-box;
+  width: 65%;
+  margin: auto;
+  height: 100vh;
+  font-family: "Fira Code", monospace;
+  font-weight: 600;
+  border-top: 3px solid #8c81e6;
+  padding: 2rem 4rem 0 4rem;
+  box-sizing: border-box;
 
-    &__section-title {
-        color: #8C81E6;
-        font-size: rem(40);
+  &__section-title {
+    color: #8c81e6;
+    font-size: rem(40);
+  }
+
+  &__title {
+    color: #fff;
+    font-size: rem(60);
+    font-weight: 500;
+    padding-top: rem(50);
+  }
+
+  &__text {
+    font-size: rem(20);
+    color: #748ca3;
+    width: 40%;
+    padding-left: rem(120);
+    padding-top: rem(25);
+  }
+
+  &__contact-me {
+    color: #fff;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 40%;
+    padding-left: rem(130);
+    padding-top: rem(50);
+
+    img {
+      padding-top: 0.5rem;
+      width: rem(22);
+    }
+  }
+
+  &__copy {
+    padding: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 3rem;
+    cursor: pointer;
+
+    &:hover {
+      color: #8c81e6;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 90%;
+    padding: 2rem;
+    text-align: center;
+
+    &__title {
+      font-size: rem(40);
+      padding-top: rem(30);
     }
 
-    &__title{
-        color: #FFF;
-        font-size: rem(60);
-        font-weight: 500;
-        padding-top: rem(50);
-    }
-    
     &__text {
-        font-size: rem(20);
-        color: #748CA3;
-        width: 40%;
-        padding-left: rem(120);
-        padding-top: rem(25);
+      width: 100%;
+      padding-left: 0;
+      padding-top: rem(20);
     }
 
     &__contact-me {
-        color: #FFF;
-        font-weight: 500;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        width: 40%;
-        padding-left: rem(130);
-        padding-top: rem(50);
-
-        img {
-            padding-top: .5rem;
-            width: rem(22);
-        }
+      width: 100%;
+      padding-left: 0;
+      padding-top: rem(30);
+      font-size: rem(15);
     }
-
-    &__copy {
-        padding: .5rem;
-        background-color: rgba(255, 255, 255, 0.05);
-        border-radius: 3rem;
-        cursor: pointer;
-
-        &:hover {
-            color: #8C81E6;
-        }
-    }
-    
+  }
 }
 
 .MuiSvgIcon-root {
-    font-size: 1.2rem!important;
+  font-size: 1.2rem !important;
 }
