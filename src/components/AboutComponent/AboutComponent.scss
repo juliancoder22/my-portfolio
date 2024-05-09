@@ -43,7 +43,7 @@
     right: -2rem;
     top: 24rem;
   }
-  
+
   &__line-1 {
     position: absolute;
     top: 21rem;
@@ -78,5 +78,45 @@
     left: 18rem;
     bottom: 8rem;
     width: rem(110);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    padding: 1rem;
+
+    &__text {
+      text-align: center;
+      font-size: rem(16);
+      width: 75%;
+      padding-top: 5rem;
+      padding-right: 1rem;
+    }
+
+    &__first-square {
+      top: 12rem;
+      left: 0;
+      height: rem(75);
+    }
+
+    &__second-square {
+      top: 15rem;
+      left: 0rem;
+      width: rem(250);
+      height: rem(100);
+    }
+
+    &__dots {
+      top: 50rem;
+      left: 3rem;
+    }
+
+    &__third-square,
+    &__trio-chevron,
+    &__line-1,
+    &__line-2,
+    &__line-3 {
+      display: none;
+    }
   }
 }
