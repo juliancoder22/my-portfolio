@@ -79,6 +79,10 @@
       padding-left: 0;
       padding-top: rem(30);
       font-size: rem(15);
+
+      img {
+        display: none;
+      }
     }
   }
 }
