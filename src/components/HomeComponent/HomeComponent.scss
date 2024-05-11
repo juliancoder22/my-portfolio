@@ -109,3 +109,74 @@
     width: 40rem;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .home {
+    padding: 2rem;
+    flex-direction: column;
+    align-items: center;
+
+    &__scroll {
+      bottom: 2rem;
+      left: auto;
+      transform: none;
+    }
+
+    &__name {
+      font-size: 2.5rem;
+      width: 100%;
+      line-height: normal;
+      text-align: center;
+    }
+
+    &__profession {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+
+    &__talk {
+      margin-top: 1rem;
+      text-align: center;
+
+      img {
+        position: relative;
+        top: 0;
+        right: 0;
+        transform: none;
+      }
+    }
+
+    &__points {
+      display: none;
+    }
+
+    &__first-square,
+    &__second-square {
+      display: none;
+    }
+
+    &__third-square {
+      display: none;
+    }
+
+    &__trio-chevron {
+      width: rem(35);
+      position: absolute;
+      bottom: 6rem;
+      animation: moveUpDown 1.5s ease-in-out infinite;
+    }
+
+    @keyframes moveUpDown {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(0.6rem);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+  }
+}
