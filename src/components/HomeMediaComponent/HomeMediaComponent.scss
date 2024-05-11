@@ -36,3 +36,9 @@
     right: 5rem;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .home-media {
+    display: none;
+  }
+}
