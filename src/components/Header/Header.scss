@@ -60,3 +60,35 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+
+    &__nav {
+      padding: 2px 4px;
+      gap: rem(15px);
+      li {
+        font-size: rem(12);
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+
+    &__language-menu {
+      .MuiPaper-root {
+        .MuiMenuItem-root {
+          font-size: rem(10);
+          font-weight: 600;
+          width: rem(80);
+        }
+      }
+    }
+  }
+}

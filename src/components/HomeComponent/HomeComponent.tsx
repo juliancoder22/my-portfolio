@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import Points from "../../assets/svg/dots.svg";
 import ArrowRight from "../../assets/svg/arrow-right.svg";
 import "./HomeComponent.scss";
+import TrioChevron from "../../assets/svg/trio-chevron.svg";
+
 // import HomeSocialMedia from "../SocialMedia/HomeSocialMedia";
 
 const HomeComponent = () => {
@@ -14,8 +16,8 @@ const HomeComponent = () => {
     const originalName = "Julian Aquino";
     const intervalId = setInterval(() => {
       if (writingIndex < originalName.length) {
-        setName(prevName => prevName + originalName[writingIndex]);
-        setWritingIndex(prevIndex => prevIndex + 1);
+        setName((prevName) => prevName + originalName[writingIndex]);
+        setWritingIndex((prevIndex) => prevIndex + 1);
       } else {
         clearInterval(intervalId);
       }
@@ -28,8 +30,11 @@ const HomeComponent = () => {
     const originalProfession = "web developer";
     const intervalId = setInterval(() => {
       if (writingProfessionIndex < originalProfession.length) {
-        setProfession(prevProfession => prevProfession + originalProfession[writingProfessionIndex]);
-        setWritingProfessionIndex(prevIndex => prevIndex + 1);
+        setProfession(
+          (prevProfession) =>
+            prevProfession + originalProfession[writingProfessionIndex]
+        );
+        setWritingProfessionIndex((prevIndex) => prevIndex + 1);
       } else {
         clearInterval(intervalId);
       }
@@ -58,6 +63,7 @@ const HomeComponent = () => {
       <button className="home__talk">
         Let’s talk <img src={ArrowRight} alt="arrow right" />
       </button>
+      <img src={TrioChevron} alt="dots" className="home__trio-chevron" />
     </div>
   );
 };
