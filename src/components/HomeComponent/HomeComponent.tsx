@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Points from "../../assets/svg/dots.svg";
 import ArrowRight from "../../assets/svg/arrow-right.svg";
 import "./HomeComponent.scss";
+import { HomeMediaComponent } from "../HomeMediaComponent/HomeMediaComponent";
 import TrioChevron from "../../assets/svg/trio-chevron.svg";
 
 // import HomeSocialMedia from "../SocialMedia/HomeSocialMedia";
@@ -46,6 +47,7 @@ const HomeComponent = () => {
   return (
     <div className="home">
       {/* <HomeSocialMedia /> */}
+      <HomeMediaComponent />
       <div className="home__first-square"></div>
       <div className="home__second-square"></div>
       <div className="home__third-square"></div>
