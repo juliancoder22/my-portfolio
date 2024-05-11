@@ -4,12 +4,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.2rem 25px;
+  padding: 0.2rem rem(100);
   position: absolute;
   top: 1rem;
   left: 0;
   right: 0;
   font-family: "Fira Code", monospace;
+  z-index: 1;
 
   img {
     width: 32px;
