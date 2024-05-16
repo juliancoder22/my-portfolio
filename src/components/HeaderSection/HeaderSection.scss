@@ -1,32 +1,53 @@
+@import "../../constants/styles/rem-calc.scss";
+
 .header-section {
-    font-family: "Fira Code", monospace;
-    width: 100%;
+  font-family: "Fira Code", monospace;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12rem;
+
+  &__header-content {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12rem;
-    
-      &__header-content {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-      }
-    
-      &__title {
-        font-size: 40px;
-        font-weight: 600;
-        color: #fff;
-    
-        span {
-          color: #8c81e6;
-        }
-      }
-    
-      &__subtitle {
-        color: #fff;
-        font-size: 18px;
-        font-weight: 400;
-        margin-top: -20px;
-      }
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__title {
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+
+    span {
+      color: #8c81e6;
+    }
+  }
+
+  &__subtitle {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: -20px;
+  }
 }
 
+@media screen and (max-width: 768px) {
+  .header-section {
+    gap: 1rem; // Adjusting the gap for smaller screens
+
+    &__title {
+      font-size: rem(16); // Smaller font size for the title
+    }
+
+    &__subtitle {
+      font-size: rem(12); // Smaller font size for the subtitle
+      margin-top: -10px; // Adjusting margin for better spacing
+    }
+
+    img {
+      width: 40%; // Adjusting the width of the image on smaller screens
+      margin-top: 1rem; // Adding margin to separate the image from the content
+    }
+  }
+}

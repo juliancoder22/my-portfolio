@@ -41,3 +41,9 @@
     left: 0rem;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .skills-media {
+    display: none;
+  }
+}
