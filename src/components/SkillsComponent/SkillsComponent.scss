@@ -53,64 +53,14 @@
     margin-top: rem(70);
   }
 
-  &__frontend {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-  }
-
-  &__frontend-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid #748ca3;
-
-    h2 {
-      color: #fff;
-      font-weight: 400;
-    }
-
-    button {
-      color: #fff;
-      cursor: pointer;
-      background: none;
-      outline: none;
-      border: none;
-      font-size: rem(20);
-
-      &.rotate {
-        span {
-          transform: rotate(45deg);
-        }
-      }
-    }
-  }
-
-  &__frontend-content {
-    display: none;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    max-height: rem(1000);
-    opacity: 0;
-
-    p {
-      color: #748ca3;
-    }
-  }
-
-  &__frontend-content.expanded {
-    display: block;
-    max-height: rem(1000);
-    opacity: 1;
-    @extend .expand-from-bottom;
-  }
-
+  &__frontend,
   &__backend {
     display: flex;
     flex-direction: column;
     width: 50%;
   }
 
+  &__frontend-header,
   &__backend-header {
     display: flex;
     justify-content: space-between;
@@ -138,6 +88,7 @@
     }
   }
 
+  &__frontend-content,
   &__backend-content {
     display: none;
     overflow: hidden;
@@ -150,6 +101,7 @@
     }
   }
 
+  &__frontend-content.expanded,
   &__backend-content.expanded {
     display: block;
     max-height: rem(1000);
@@ -163,31 +115,19 @@
     align-items: flex-start;
     gap: 2rem;
     width: 60%;
-    margin-top: 8rem;
+    margin-top: 6rem;
 
     ul {
       margin: 0;
       padding-left: 2rem;
+
       li {
         color: #748ca3;
       }
     }
   }
 
-  &__languages {
-    display: flex;
-    flex-direction: column;
-    width: 33.33%;
-
-    h3 {
-      color: #fff;
-      font-weight: 400;
-      border-bottom: 2px solid #748ca3;
-      width: 100%;
-      padding-bottom: 0.5rem;
-    }
-  }
-
+  &__languages,
   &__frameworks {
     display: flex;
     flex-direction: column;
@@ -237,5 +177,51 @@
     left: rem(80);
     top: 25rem;
     width: rem(80);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skills-component {
+    flex-direction: column;
+
+    &__content-info {
+      flex-direction: column;
+    }
+
+    &__frontend,
+    &__backend {
+      width: 105%;
+    }
+
+    &__square {
+      display: none;
+    }
+
+    &__trio-chevron {
+      display: none;
+    }
+
+    &__dots {
+      left: 21rem;
+      bottom: 4rem;
+      width: 4rem;
+    }
+
+    &__content-skills {
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: center;
+
+      &__languages,
+      &__frameworks {
+        width: 50%;
+      }
+
+      &__tools {
+        width: 100%;
+        margin-top: 1rem;
+      }
+    }
   }
 }
