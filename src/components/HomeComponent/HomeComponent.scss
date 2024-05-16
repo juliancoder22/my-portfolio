@@ -99,15 +99,6 @@
     right: rem(120);
     bottom: rem(70);
   }
-
-  &__third-square {
-    border: 1px solid #748ca3;
-    position: absolute;
-    top: -7rem;
-    left: -10rem;
-    height: 15rem;
-    width: 40rem;
-  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -151,9 +142,17 @@
       display: none;
     }
 
-    &__first-square,
+    &__first-square {
+      top: 6rem;
+      left: 2rem;
+      width: 3.5rem;
+      height: 3.5rem;
+    }
     &__second-square {
-      display: none;
+      top: 8rem;
+      left: 4rem;
+      width: 3.5rem;
+      height: 3.5rem;
     }
 
     &__third-square {

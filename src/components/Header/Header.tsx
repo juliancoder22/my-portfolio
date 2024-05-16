@@ -14,12 +14,12 @@ export const Header = () => {
 
   const handleLanguageClick = (event) => {
     setAnchorEl(event.currentTarget);
-    setMenuOpen(!menuOpen); // Cambia el estado de apertura del menú
+    setMenuOpen(!menuOpen);
   };
 
   const handleLanguageClose = () => {
     setAnchorEl(null);
-    setMenuOpen(false); // Cierra el menú
+    setMenuOpen(false);
   };
 
   const handleLanguageChange = (lang) => {
@@ -29,7 +29,6 @@ export const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Cierra el menú cuando se detecta un desplazamiento
       handleLanguageClose();
     };
 
@@ -38,7 +37,7 @@ export const Header = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []); // Se ejecuta solo una vez al montar el componente
+  }, []);
 
   return (
     <div className="header">

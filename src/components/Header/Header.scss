@@ -10,6 +10,8 @@
   left: 0;
   right: 0;
   font-family: "Fira Code", monospace;
+  border-top: 1px solid #b6c5d3;
+  border-bottom: 1px solid #b6c5d3;
 
   img {
     width: 32px;
@@ -64,6 +66,7 @@
 @media screen and (max-width: 768px) {
   .header {
     flex-direction: column;
+    border: none;
 
     img {
       width: 24px;
@@ -71,10 +74,15 @@
     }
 
     &__nav {
-      padding: 2px 4px;
-      gap: rem(15px);
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+
       li {
+        padding: 0.5rem 0;
         font-size: rem(12);
+
         &:last-child {
           display: none;
         }
