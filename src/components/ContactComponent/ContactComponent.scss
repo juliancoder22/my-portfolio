@@ -62,9 +62,13 @@
     width: 90%;
     padding: 2rem;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
     &__title {
-      font-size: rem(40);
+      font-size: rem(22);
       padding-top: rem(30);
     }
 
@@ -72,13 +76,14 @@
       width: 100%;
       padding-left: 0;
       padding-top: rem(20);
+      font-size: rem(15);
     }
 
     &__contact-me {
       width: 100%;
       padding-left: 0;
       padding-top: rem(30);
-      font-size: rem(15);
+      font-size: rem(14);
 
       img {
         display: none;
