@@ -58,3 +58,41 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .experience-work {
+    width: 85%;
+    overflow: hidden;
+
+    &__header {
+      padding: 0.8rem;
+    }
+
+    .left {
+      width: 90%;
+    }
+
+    h2 {
+      font-size: rem(16);
+    }
+
+    h3 {
+      font-size: rem(14);
+    }
+
+    .right {
+      width: 0%;
+
+      span {
+        display: none;
+      }
+    }
+
+    &__content {
+      padding: 0.7rem;
+      p {
+        font-size: rem(12);
+      }
+    }
+  }
+}
