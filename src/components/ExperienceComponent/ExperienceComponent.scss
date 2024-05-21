@@ -88,3 +88,43 @@
   left: 24rem;
   bottom: 4.2rem;
 }
+
+@media screen and (max-width: 768px) {
+  .experience {
+    height: auto;
+    padding-bottom: 2rem;
+    &__company-square {
+      width: rem(100);
+      top: 6rem;
+      left: -0.5rem;
+      padding: 0.5rem;
+
+      span {
+        font-size: rem(18);
+      }
+    }
+
+    &__first-square,
+    &__second-square,
+    &__third-square {
+      display: none;
+    }
+
+    &__experiences {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6rem;
+      padding-top: 8rem;
+    }
+  }
+
+  .anthos {
+    position: static;
+  }
+
+  .madcave {
+    position: static;
+  }
+}

@@ -17,31 +17,26 @@ export const ExperienceComponent = () => {
         <span>Loop3</span>
       </div>
 
-      <ExperienceWork
-        title={anthos.title}
-        projectName={anthos.projectName}
-        date={anthos.date}
-        content={anthos.content}
-        className="anthos"
-      />
-
-      <div className="experience__work-connection-one"></div>
-
-      <div className="experience__work-connection-two"></div>
-
-      <img src={DoubleChevron} className="experience__double-chevron" />
+      <div className="experience__experiences">
+        <ExperienceWork
+          title={anthos.title}
+          projectName={anthos.projectName}
+          date={anthos.date}
+          content={anthos.content}
+          className="anthos"
+        />
+        <ExperienceWork
+          title={madcave.title}
+          projectName={madcave.projectName}
+          date={madcave.date}
+          content={madcave.content}
+          className="madcave"
+        />
+      </div>
 
       <div className="experience__first-square"></div>
       <div className="experience__second-square"></div>
       <div className="experience__third-square"></div>
-
-      <ExperienceWork
-        title={madcave.title}
-        projectName={madcave.projectName}
-        date={madcave.date}
-        content={madcave.content}
-        className="madcave"
-      />
     </div>
   );
 };
