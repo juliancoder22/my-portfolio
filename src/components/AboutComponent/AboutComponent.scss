@@ -43,7 +43,7 @@
     right: -2rem;
     top: 24rem;
   }
-  
+
   &__line-1 {
     position: absolute;
     top: 21rem;
@@ -78,5 +78,48 @@
     left: 18rem;
     bottom: 8rem;
     width: rem(110);
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding-top: 1rem;
+
+    &__text {
+      width: rem(300);
+      font-size: rem(16);
+      line-height: rem(22);
+      margin: rem(100) auto 0 auto;
+      text-align: center;
+    }
+
+    &__first-square,
+    &__second-square,
+    &__third-square {
+      width: rem(100);
+      height: rem(100);
+    }
+
+    &__first-square,
+    &__second-square,
+    &__third-square {
+      display: none;
+    }
+
+    &__line-1,
+    &__line-2,
+    &__line-3 {
+      display: none;
+    }
+
+    &__trio-chevron {
+      display: none;
+    }
+
+    &__dots {
+      left: 39%;
+      bottom: 8rem;
+      width: rem(80);
+    }
   }
 }
