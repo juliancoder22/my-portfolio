@@ -12,6 +12,7 @@
   font-family: "Fira Code", monospace;
   border-top: 1px solid #b6c5d3;
   border-bottom: 1px solid #b6c5d3;
+  z-index: 1;
 
   img {
     width: 32px;
@@ -47,7 +48,7 @@
 
   &__language-menu {
     .MuiPaper-root {
-      background-color: rgba(255, 255, 255, 0.09);
+      background-color: #1c232d;
       color: rgba(116, 140, 163, 1);
       text-transform: uppercase;
 
