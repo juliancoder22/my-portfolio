@@ -9,13 +9,26 @@ export const HomeMediaComponent = () => {
     <div className="home-media">
       <ul className="home-media__links">
         <li>
-          <LinkedInIcon className="home-media__icon" />
+          <a
+            href="https://www.linkedin.com/in/juli%C3%A1n-aquino-189b2320a/"
+            target="_blank"
+          >
+            <LinkedInIcon className="home-media__icon" />
+          </a>
         </li>
         <li>
-          <GitHubIcon className="home-media__icon" />
+          <a href="https://github.com/juliancoder22" target="_blank">
+            <GitHubIcon className="home-media__icon" />
+          </a>
         </li>
         <li>
-          <EmailIcon className="home-media__icon" />
+          <a
+            href="mailto:julian.andres.aquino33@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <EmailIcon className="home-media__icon" />
+          </a>
         </li>
       </ul>
       <img src={VerticalLine} className="home-media__vertical" />

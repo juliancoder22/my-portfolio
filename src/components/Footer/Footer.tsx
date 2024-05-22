@@ -8,22 +8,24 @@ export const Footer = () => {
       <img src={profile} alt="" className="footer__profile" />
       <ul className="footer__list">
         <li>
-          <a href="#">
+          <a
+            href="https://www.linkedin.com/in/juli%C3%A1n-aquino-189b2320a/"
+            target="_blank"
+          >
             linkedin [ <img src={ArrowRight} alt="arrow right" /> ]
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="https://github.com/juliancoder22" target="_blank">
             github [ <img src={ArrowRight} alt="arrow right" /> ]
           </a>
         </li>
         <li>
-          <a href="#">
-            whatsapp [ <img src={ArrowRight} alt="arrow right" /> ]
-          </a>
-        </li>
-        <li>
-          <a href="#">
+          <a
+            href="mailto:julian.andres.aquino33@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             email [ <img src={ArrowRight} alt="arrow right" /> ]
           </a>
         </li>

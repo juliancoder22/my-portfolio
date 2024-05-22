@@ -7,7 +7,13 @@ import ArrowRight from "../../assets/svg/lila-arrow-right.svg";
 import Logo from "../../assets/LogoA_celestemedio.png";
 import "./Header.scss";
 
-export const Header = () => {
+export const Header = ({
+  homeRef,
+  skillsRef,
+  experienceRef,
+  aboutRef,
+  contactRef,
+}) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [language, setLanguage] = useState("EN");
   const [menuOpen, setMenuOpen] = useState(false);
@@ -39,28 +45,34 @@ export const Header = () => {
     };
   }, []);
 
+  const handleScrollTo = (ref) => {
+    if (ref && ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="header">
       <img src={Logo} alt="Julian Aquino Logo" />
 
       <ul className="header__nav">
-        <li>
+        <li onClick={() => handleScrollTo(homeRef)}>
           <span className="header__bar">/ </span>Home
         </li>
-        <li>
+        <li onClick={() => handleScrollTo(skillsRef)}>
           <span className="header__bar">/ </span>Skills
         </li>
-        <li>
+        <li onClick={() => handleScrollTo(experienceRef)}>
           <span className="header__bar">/ </span>Experience
         </li>
-        <li>
+        <li onClick={() => handleScrollTo(aboutRef)}>
           <span className="header__bar">/ </span>About
         </li>
         <li onClick={handleLanguageClick}>
           <LanguageIcon /> {language}{" "}
           {menuOpen ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
         </li>
-        <li>
+        <li onClick={() => handleScrollTo(contactRef)}>
           Contact <img src={ArrowRight} alt="arrow right" />
         </li>
       </ul>
