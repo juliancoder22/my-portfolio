@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import Points from "../../assets/svg/dots.svg";
 import TrioChevron from "../../assets/svg/trio-chevron.svg";
 import Square from "../../assets/svg/square.svg";
@@ -9,6 +10,7 @@ import RemoveIcon from "@mui/icons-material/Remove";
 import { SkillsMediaComponent } from "../SkillsMediaComponent/SkillsMediaComponent";
 
 function SkillsComponent() {
+  const { t } = useTranslation();
   const [frontendExpanded, setFrontendExpanded] = useState(false);
   const [backendExpanded, setBackendExpanded] = useState(false);
 
@@ -23,12 +25,12 @@ function SkillsComponent() {
   return (
     <div className="skills-component">
       <SkillsMediaComponent />
-      <SectionHeader title="skills" subtitle="What can I do?" />
+      <SectionHeader title={t("skills")} subtitle={t("whatCanIDo")} />
       <div className="skills-component__content">
         <div className="skills-component__content-info">
           <div className="skills-component__frontend">
             <div className="skills-component__frontend-header">
-              <h2>Frontend</h2>
+              <h2>{t("frontend")}</h2>
               <button onClick={toggleFrontendExpanded}>
                 {frontendExpanded ? <RemoveIcon /> : <AddIcon />}
               </button>
@@ -38,18 +40,12 @@ function SkillsComponent() {
                 frontendExpanded ? "expanded" : "expand-from-top"
               }`}
             >
-              <p>
-                Proficient in React, Redux, and Redux Toolkit for building
-                interactive and dynamic user interfaces. Experience using
-                TypeScript to enhance code frontend solidity and scalability.
-                Experience with testing frameworks like Jest or Vitest for
-                comprehensive frontend testing.
-              </p>
+              <p>{t("frontendDescription")}</p>
             </div>
           </div>
           <div className="skills-component__backend">
             <div className="skills-component__backend-header">
-              <h2>Backend</h2>
+              <h2>{t("backend")}</h2>
               <button onClick={toggleBackendExpanded}>
                 {backendExpanded ? <RemoveIcon /> : <AddIcon />}
               </button>
@@ -59,13 +55,7 @@ function SkillsComponent() {
                 backendExpanded ? "expanded" : "expand-from-top"
               }`}
             >
-              <p>
-                Proficient in React, Redux, and Redux Toolkit for building
-                interactive and dynamic user interfaces. Experience using
-                TypeScript to enhance code frontend solidity and scalability.
-                Experience with testing frameworks like Jest or Vitest for
-                comprehensive frontend testing.
-              </p>
+              <p>{t("backendDescription")}</p>
             </div>
           </div>
         </div>
@@ -78,33 +68,33 @@ function SkillsComponent() {
           <img src={Points} alt="dots" className="skills-component__dots" />
           <img src={Square} alt="square" className="skills-component__square" />
           <div className="skills-component__languages">
-            <h3>Languages</h3>
+            <h3>{t("languages")}</h3>
             <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>Javascript</li>
-              <li>Typescript</li>
-              <li>Java</li>
+              <li>{t("html")}</li>
+              <li>{t("css")}</li>
+              <li>{t("javascript")}</li>
+              <li>{t("typescript")}</li>
+              <li>{t("java")}</li>
             </ul>
           </div>
 
           <div className="skills-component__frameworks">
-            <h3>Frameworks</h3>
+            <h3>{t("frameworks")}</h3>
             <ul>
-              <li>React</li>
-              <li>Redux</li>
-              <li>Redux Toolkit</li>
-              <li>Spring</li>
-              <li>Jest</li>
-              <li>Vitest</li>
+              <li>{t("react")}</li>
+              <li>{t("redux")}</li>
+              <li>{t("reduxToolkit")}</li>
+              <li>{t("spring")}</li>
+              <li>{t("jest")}</li>
+              <li>{t("vitest")}</li>
             </ul>
           </div>
 
           <div className="skills-component__tools">
-            <h3>Tools</h3>
+            <h3>{t("tools")}</h3>
             <ul>
-              <li>ViteJS</li>
-              <li>SASS</li>
+              <li>{t("vitejs")}</li>
+              <li>{t("sass")}</li>
             </ul>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import LanguageIcon from "@mui/icons-material/Language";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
@@ -14,8 +15,8 @@ export const Header = ({
   aboutRef,
   contactRef,
 }) => {
+  const { t, i18n } = useTranslation();
   const [anchorEl, setAnchorEl] = useState(null);
-  const [language, setLanguage] = useState("EN");
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleLanguageClick = (event) => {
@@ -29,7 +30,7 @@ export const Header = ({
   };
 
   const handleLanguageChange = (lang) => {
-    setLanguage(lang);
+    i18n.changeLanguage(lang);
     handleLanguageClose();
   };
 
@@ -57,23 +58,27 @@ export const Header = ({
 
       <ul className="header__nav">
         <li onClick={() => handleScrollTo(homeRef)}>
-          <span className="header__bar">/ </span>Home
+          <span className="header__bar">/ </span>
+          {t("home")}
         </li>
         <li onClick={() => handleScrollTo(skillsRef)}>
-          <span className="header__bar">/ </span>Skills
+          <span className="header__bar">/ </span>
+          {t("skills")}
         </li>
         <li onClick={() => handleScrollTo(experienceRef)}>
-          <span className="header__bar">/ </span>Experience
+          <span className="header__bar">/ </span>
+          {t("experience")}
         </li>
         <li onClick={() => handleScrollTo(aboutRef)}>
-          <span className="header__bar">/ </span>About
+          <span className="header__bar">/ </span>
+          {t("about")}
         </li>
         <li onClick={handleLanguageClick}>
-          <LanguageIcon /> {language}{" "}
+          <LanguageIcon /> {i18n.language.toUpperCase()}{" "}
           {menuOpen ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
         </li>
         <li onClick={() => handleScrollTo(contactRef)}>
-          Contact <img src={ArrowRight} alt="arrow right" />
+          {t("contact")} <img src={ArrowRight} alt="arrow right" />
         </li>
       </ul>
 
@@ -83,8 +88,8 @@ export const Header = ({
         onClose={handleLanguageClose}
         className="header__language-menu"
       >
-        <MenuItem onClick={() => handleLanguageChange("EN")}>English</MenuItem>
-        <MenuItem onClick={() => handleLanguageChange("ES")}>Español</MenuItem>
+        <MenuItem onClick={() => handleLanguageChange("en")}>English</MenuItem>
+        <MenuItem onClick={() => handleLanguageChange("es")}>Español</MenuItem>
       </Menu>
     </div>
   );

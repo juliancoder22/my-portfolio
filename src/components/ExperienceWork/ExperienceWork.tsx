@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import "./ExperienceWork.scss";
 
 interface ExperienceWorkProps {
@@ -15,19 +16,21 @@ export const ExperienceWork: React.FC<ExperienceWorkProps> = ({
   content,
   className,
 }) => {
+  const { t } = useTranslation();
+
   return (
     <div className={`experience-work ${className}`}>
       <div className="experience-work__header">
         <div className="left">
-          <h2>{title}</h2>
-          <h3>- {projectName}</h3>
+          <h2>{t(title)}</h2>
+          <h3>- {t(projectName)}</h3>
         </div>
         <div className="right">
           <span>[{date}]</span>
         </div>
       </div>
       <div className="experience-work__content">
-        <p>{content}</p>
+        <p>{t(content)}</p>
       </div>
     </div>
   );
