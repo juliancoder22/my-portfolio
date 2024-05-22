@@ -8,7 +8,15 @@ import ArrowRight from "../../assets/svg/lila-arrow-right.svg";
 import Logo from "../../assets/LogoA_celestemedio.png";
 import "./Header.scss";
 
-export const Header = ({
+interface HeaderProps {
+  homeRef: React.RefObject<HTMLDivElement>;
+  skillsRef: React.RefObject<HTMLDivElement>;
+  experienceRef: React.RefObject<HTMLDivElement>;
+  aboutRef: React.RefObject<HTMLDivElement>;
+  contactRef: React.RefObject<HTMLDivElement>;
+}
+
+export const Header: React.FC<HeaderProps> = ({
   homeRef,
   skillsRef,
   experienceRef,

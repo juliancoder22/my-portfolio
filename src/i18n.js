@@ -89,7 +89,7 @@ const resources = {
       scroll: "[DESPLAZARSE]",
       hey: "¡Hola! Soy",
       profession: "Soy un",
-      letsTalk: "Contactame",
+      letsTalk: "Contáctame",
       name: "Julian Aquino",
       professionTitle: "desarrollador",
       whatCanIDo: "¿Qué puedo hacer?",
