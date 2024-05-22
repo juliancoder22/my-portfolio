@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import Points from "../../assets/svg/dots.svg";
 import ArrowRight from "../../assets/svg/arrow-right.svg";
@@ -6,7 +6,7 @@ import TrioChevron from "../../assets/svg/trio-chevron.svg";
 import "./HomeComponent.scss";
 import { HomeMediaComponent } from "../HomeMediaComponent/HomeMediaComponent";
 
-const HomeComponent = () => {
+const HomeComponent = ({ contactRef }) => {
   const { t } = useTranslation();
   const [name, setName] = useState("");
   const [profession, setProfession] = useState("");
@@ -58,6 +58,12 @@ const HomeComponent = () => {
     };
   }, []);
 
+  const handleTalkClick = () => {
+    if (contactRef && contactRef.current) {
+      contactRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="home">
       <HomeMediaComponent />
@@ -71,7 +77,7 @@ const HomeComponent = () => {
       <h2 className="home__profession">
         {t("profession")} <span className="home__lila">{profession}</span>
       </h2>
-      <button className="home__talk">
+      <button className="home__talk" onClick={handleTalkClick}>
         {t("letsTalk")} <img src={ArrowRight} alt="arrow right" />
       </button>
       {isSmallScreen && (
