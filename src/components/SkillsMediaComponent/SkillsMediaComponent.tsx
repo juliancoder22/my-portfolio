@@ -9,14 +9,27 @@ export const SkillsMediaComponent = () => {
   return (
     <div className="skills-media">
       <ul className="skills-media__links">
-        <li>
-          <LinkedInIcon className="skills-media__icon" />
+      <li>
+          <a
+            href="https://www.linkedin.com/in/juli%C3%A1n-aquino-189b2320a/"
+            target="_blank"
+          >
+            <LinkedInIcon className="skills-media__icon" />
+          </a>
         </li>
         <li>
-          <GitHubIcon className="skills-media__icon" />
+          <a href="https://github.com/juliancoder22" target="_blank">
+            <GitHubIcon className="skills-media__icon" />
+          </a>
         </li>
         <li>
-          <EmailIcon className="skills-media__icon" />
+          <a
+            href="mailto:julian.andres.aquino33@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <EmailIcon className="skills-media__icon" />
+          </a>
         </li>
       </ul>
       <img src={VerticalLine} className="skills-media__vertical" />
