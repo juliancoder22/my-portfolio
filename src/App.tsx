@@ -24,7 +24,7 @@ function App() {
         contactRef={contactRef}
       />
       <div ref={homeRef}>
-        <HomeComponent />
+        <HomeComponent contactRef={contactRef} />
       </div>
       <div ref={skillsRef}>
         <SkillsComponent />
